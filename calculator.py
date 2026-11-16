@@ -1,7 +1,7 @@
-sprintDistance = 60
-sprintTime = 9.04
-speedPercentage = 80
-
-def tempoCalculator():
+def tempoCalculator(sprintDistance, sprintTime):
     metersPerSecond = sprintDistance / sprintTime
-    tempoTime = sprintDistance / (metersPerSecond * (speedPercentage / 100))
+    tempoTimes = []
+    for i in range(65, 100):
+        tempoTime = sprintDistance / (metersPerSecond * (i / 100))
+        tempoTimes.append(tempoTime)
+    return tempoTimes
